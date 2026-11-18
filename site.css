@@ -156,9 +156,10 @@ section{padding:clamp(72px,10vw,128px) 0}
 .work-feature{margin-top:48px;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);text-decoration:none;color:inherit;border:1px solid var(--rule);background:#fff;overflow:hidden;transition:box-shadow .3s,transform .3s}
 .work-feature:hover{box-shadow:0 18px 40px -20px rgba(16,43,70,.35);transform:translateY(-2px)}
 .wf-art{background:#EFBB72;display:grid;place-items:center;padding:clamp(24px,4vw,48px);position:relative}
-.wf-art::after{content:"";position:absolute;left:18%;right:18%;bottom:10%;height:26px;background:radial-gradient(ellipse,rgba(65,72,82,.3),transparent 70%)}
-.wf-art img{width:100%;max-width:340px;height:auto;position:relative;z-index:1;transition:transform .5s}
-.work-feature:hover .wf-art img{transform:rotate(-3deg) scale(1.03)}
+.q-ground{position:relative;display:block;width:100%;max-width:340px}
+.q-ground img{display:block;width:100%;height:auto;position:relative;z-index:1;transition:transform .5s;transform-origin:50% 95%}
+.q-shadow{position:absolute;left:14%;width:66%;bottom:0;height:7%;background:radial-gradient(ellipse at center,rgba(60,40,10,.45) 0%,rgba(60,40,10,.18) 45%,transparent 72%);z-index:0}
+.work-feature:hover .q-ground img{transform:rotate(-2deg)}
 .wf-text{padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:14px}
 .wf-tag{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--forge-ink)}
 .wf-text h3{font-size:clamp(40px,5vw,64px);font-weight:860;font-stretch:112%;letter-spacing:-.03em;color:#414852}
@@ -170,7 +171,7 @@ section{padding:clamp(72px,10vw,128px) 0}
 .wf-link{margin-top:8px;font-weight:600;display:inline-flex;gap:8px;align-items:center;color:var(--navy)}
 .work-feature:hover .wf-link .arrow{transform:translateX(3px)}
 .wf-link .arrow{transition:transform .2s}
-@media (max-width:900px){.work-feature{grid-template-columns:1fr}.wf-art img{max-width:240px}}
+@media (max-width:900px){.work-feature{grid-template-columns:1fr}.q-ground{max-width:240px}}
 
 /* Why */
 .why{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(40px,6vw,96px);align-items:start}
