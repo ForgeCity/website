@@ -218,6 +218,28 @@ section{padding:clamp(72px,10vw,128px) 0}
 .practice-card p{color:var(--muted);font-size:15.5px}
 .practice-card .status{margin-top:auto;padding-top:8px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mineral)}
 .practice-card.future{background:transparent;border-style:dashed}
+/* Flip cards */
+.flip{perspective:1400px;cursor:pointer;border-radius:2px;-webkit-tap-highlight-color:transparent}
+.flip:focus-visible{outline:2px solid var(--forge);outline-offset:4px}
+.flip-inner{display:grid;height:100%;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.3,.7,.2,1)}
+.flip.flipped .flip-inner{transform:rotateY(180deg)}
+.flip .face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;min-height:100%}
+.flip .back{transform:rotateY(180deg);background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.flip.future .front{background:transparent;border-style:dashed}
+.flip:hover .front{box-shadow:0 14px 30px -18px rgba(16,43,70,.35)}
+.card-foot{margin-top:auto;padding-top:8px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.card-foot .status{margin-top:0;padding-top:0}
+.flip-hint{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8A99A6;display:inline-flex;align-items:center;gap:6px;transition:color .2s}
+.flip:hover .flip-hint{color:var(--forge-ink)}
+.back .flip-hint{color:#7F93A6}
+.flip:hover .back .flip-hint{color:var(--forge)}
+.back .back-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--forge)}
+.back .back-label.how{margin-top:6px}
+.back q{font-family:var(--font-display);font-size:18px;font-weight:600;line-height:1.3;color:#fff;quotes:"\201C" "\201D"}
+.back .how-text{color:var(--on-navy-muted);font-size:14.5px}
+.back-foot{justify-content:flex-end}
+.flip-hint{white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.flip-inner{transition:none}}
 .endorse{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;color:var(--muted);font-size:15.5px}
 .endorse .badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--rule);background:#fff;padding:8px 14px;font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
 .endorse .badge svg{width:18px}
