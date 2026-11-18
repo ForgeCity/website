@@ -127,6 +127,23 @@ section{padding:clamp(72px,10vw,128px) 0}
 @media (max-width:900px){.persp-head{grid-template-columns:1fr;gap:20px}.seats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.seats{grid-template-columns:1fr}.seat{padding-right:0}}
 
+/* AI layer */
+.ai-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--forge);box-shadow:0 0 0 3px rgba(240,122,26,.18);flex:none}
+.ai-line{display:flex;gap:10px;align-items:baseline;font-size:14px !important;color:var(--on-navy) !important;margin-top:14px !important;padding-top:12px;border-top:1px dashed rgba(255,255,255,.16)}
+.ai-line .ai-dot{transform:translateY(-1px)}
+.ai-principles{margin-top:72px;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.6fr);gap:clamp(32px,5vw,72px);padding:clamp(28px,4vw,48px);background:var(--navy-deep);border:1px solid rgba(255,255,255,.08);border-top:3px solid var(--forge)}
+.ai-kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--forge);display:flex;align-items:center;gap:10px}
+.ai-head h3{font-size:clamp(28px,3vw,38px);font-weight:800;font-stretch:115%;letter-spacing:-.015em;margin-top:14px;color:#fff}
+.ai-head > p:last-child{color:var(--on-navy-muted);margin-top:14px;font-size:16px}
+.ai-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.ai-cols h4{font-family:var(--font-display);font-size:19px;font-weight:720;font-stretch:108%;margin:0;color:#fff;line-height:1.2}
+.ai-cols p{color:var(--on-navy-muted);font-size:15px;margin-top:10px}
+.ai-cols > div{padding-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.chip.ai{border-color:rgba(240,122,26,.45);background:#FFF6EE;display:inline-flex;align-items:center;gap:8px}
+.chip.ai::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--forge)}
+.ai-key{display:inline-flex;align-items:center;gap:8px;margin-left:4px;color:var(--muted)}
+@media (max-width:900px){.ai-principles{grid-template-columns:1fr}.ai-cols{grid-template-columns:1fr;gap:20px}}
+
 /* Capabilities */
 .cap-list{margin-top:56px;border-top:2px solid var(--ink)}
 .cap{display:grid;grid-template-columns:64px minmax(0,1.1fr) minmax(0,1.5fr) minmax(0,1.2fr);gap:28px;padding:34px 0;border-bottom:1px solid var(--rule);align-items:start;transition:background .25s}
