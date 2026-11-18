@@ -89,11 +89,14 @@ section{padding:clamp(72px,10vw,128px) 0}
 .hero h1 em{margin-top:.08em}
 
 /* Needs */
-.needs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0;margin-top:56px;border-top:1px solid var(--rule)}
+.needs-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:56px;border-top:1px solid var(--rule)}
 .need{padding:28px 28px 32px 0;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:14px}
 .need q{font-family:var(--font-display);font-stretch:100%;font-size:22px;font-weight:600;line-height:1.25;letter-spacing:-.005em;quotes:"\201C" "\201D"}
 .need p{color:var(--muted);font-size:15.5px}
 .need-tag{font-family:var(--font-mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mineral)}
+
+@media (max-width:1020px){.needs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.needs-grid{grid-template-columns:1fr}.need{padding-right:0}}
 
 /* Approach */
 .approach-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:end}
